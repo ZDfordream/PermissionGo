@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="20dp">
+
+    <ImageView
+        android:id="@+id/permission_item_img"
+        android:layout_width="20dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/permission_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/permission_item_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:layout_toRightOf="@+id/permission_item_img"
+        tool:text="手机电话权限"/>
+
+    <TextView
+        android:id="@+id/permission_item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/permission_item_name"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/permission_item_img"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tool:text="不给定位无法使用附近功能"/>
+</RelativeLayout>
