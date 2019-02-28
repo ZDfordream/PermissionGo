@@ -3,9 +3,6 @@ package com.zhudong.permissiongo.model;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * 底部按钮背景可以用core__btn_permission_guide_dialog覆盖
- */
 public class PermissionGuideModel implements Serializable {
     private String title;//标题
     private String desc;//标题下的描述

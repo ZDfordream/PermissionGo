@@ -1,9 +1,15 @@
 package com.zhudong.permissiongo.callbacks;
 
 
-import com.zhudong.permissiongo.model.PermissionsResult;
+import java.util.List;
 
 public interface PermissionsCallback {
 
-    void permissionsResult(PermissionsResult permissions);
+    void onAcceptAll();
+
+    void onAcceptPart(List<String> partAcceptedPermissions);
+
+    void onRefused(List<String> refusedPermissions);
+
+    void onNeverShowed(List<String> neverShowedPermissions);
 }

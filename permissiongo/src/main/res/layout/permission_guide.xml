@@ -36,7 +36,7 @@
             android:layout_marginTop="12dp"
             android:textColor="#666666"
             android:textSize="13sp"
-            tool:text="感谢您下载驾考宝典，为了给您提供更好的体验，建议您自行开启以下权限" />
+            tool:text="感谢您下载PermissionGo，为了给您提供更好的体验，建议您自行开启以下权限" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/permission_recyclerview"

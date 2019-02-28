@@ -19,6 +19,8 @@ import com.zhudong.permissiongo.setting.Default;
 import com.zhudong.permissiongo.setting.OPPO;
 import com.zhudong.permissiongo.setting.ViVo;
 
+import java.util.List;
+
 /**
  * 此类维护权限管理相关的工具方法
  */
@@ -168,19 +170,22 @@ public class PermissionGo {
         } else {
             PermissionGo.requestPermissions(context, new PermissionsCallback() {
                 @Override
-                public void permissionsResult(PermissionsResult results) {
-                    if (results == null || results.getList() == null || results.getList().size() == 0) {
-                        permissionCallBack.onRefused(permission);
-                    } else {
-                        PermissionModel result = results.getList().get(0);
-                        if (result.getGranted()) {
-                            permissionCallBack.onAccepted(permission);
-                        } else if (result.getShouldShowRequest()) {
-                            permissionCallBack.onRefused(permission);
-                        } else {
-                            permissionCallBack.onNeverShowed(permission);
-                        }
-                    }
+                public void onAcceptAll() {
+                    permissionCallBack.onAccepted(permission);
+                }
+
+                @Override
+                public void onAcceptPart(List<String> partAcceptedPermissions) {
+                }
+
+                @Override
+                public void onRefused(List<String> refusedPermissions) {
+                    permissionCallBack.onRefused(permission);
+                }
+
+                @Override
+                public void onNeverShowed(List<String> neverShowedPermissions) {
+                    permissionCallBack.onNeverShowed(permission);
                 }
             }, permission);
         }
