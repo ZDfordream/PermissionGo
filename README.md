@@ -11,6 +11,7 @@ dependencies {
 ## 使用
 
 PermissionGo.requestPermissions(MainActivity.this, new PermissionsCallback() {
+
             @Override
             public void onAcceptAll() {
             }
@@ -26,6 +27,7 @@ PermissionGo.requestPermissions(MainActivity.this, new PermissionsCallback() {
             @Override
             public void onNeverShowed(List<String> neverShowedPermissions) {
             }
+
         }, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION);
 
 ## 欢迎star
