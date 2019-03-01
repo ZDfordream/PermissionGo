@@ -5,7 +5,7 @@ PermissionGo 是一个轻量级的权限库，适配国内厂商。经过亿级�
 ## 依赖
 
 dependencies {
-    implementation 'com.zhudong:PermissionGo:1.0.2'
+    implementation 'com.zhudong:PermissionGo:1.0.3'
 }
 
 ## 使用
